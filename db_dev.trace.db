@@ -1,0 +1,3 @@
+2025-12-23 11:51:58.170990+09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM POST MEMBER [*]POST"; SQL statement:
+SELECT * FROM POST MEMBER POST [42000-240]
