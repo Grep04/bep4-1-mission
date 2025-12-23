@@ -10,12 +10,21 @@ import lombok.NoArgsConstructor;
 public class Member extends BaseIdAndTime {
     @Column(unique = true)
     private String username;
+
     private String password;
+
     private String nickname;
+
+    private int activityScore;
 
     public Member(String username, String password, String nickname) {
         this.username = username;
         this.password = password;
         this.nickname = nickname;
+    }
+
+    public int increaseActivityScore(int score) {
+        this.activityScore += score;
+        return this.activityScore;
     }
 }

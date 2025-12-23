@@ -18,6 +18,8 @@ public class PostService {
     }
 
     public Post write(Member author, String title, String content) {
+        author.increaseActivityScore(3);
+
         return postRepository.save(new Post(author, title, content));
     }
 
