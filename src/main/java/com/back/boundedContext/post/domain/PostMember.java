@@ -1,17 +1,21 @@
 package com.back.boundedContext.post.domain;
 
-import com.back.global.jpa.entity.BaseIdAndTime;
+import com.back.global.jpa.entity.BaseIdAndTimeManual;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/*
+ * 게시물 작성자(회원) 엔티티
+ *
+ */
 @Entity
 @Table(name = "POST_MEMBER")
 @NoArgsConstructor
 @Getter
-public class PostMember extends BaseIdAndTime {
+public class PostMember extends BaseIdAndTimeManual {
     @Column(unique = true)
     private String username;
 
