@@ -42,7 +42,8 @@ public class PostFacade {
                 member.getModifyDate(),
                 member.getUsername(),
                 "", // 비밀번호 동기화 必 X
-                member.getNickname()
+                member.getNickname(),
+                member.getActivityScore()
         );
 
         postMemberRepository.save(postMember);
