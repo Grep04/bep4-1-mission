@@ -24,16 +24,21 @@ spring:
         highlight_sql: true
         use_sql_comments: true
         default_batch_fetch_size: 100
+  batch:
+    job:
+      enabled: false # 실 서버에서만 true로 설정
 logging:
   level:
     com.back: DEBUG
     org.hibernate.orm.jdbc.bind: TRACE
     org.hibernate.orm.jdbc.extract: TRACE
     org.springframework.transaction.interceptor: TRACE
-
 custom:
   global:
     internalBackUrl: http://localhost:${server.port:8080}
+    holdingMemberId: 2
+  payout:
+    readyWaitingDays: 14
   member:
     password:
       changeDays: 90
@@ -43,5 +48,3 @@ custom:
         secretKey: ${TOSS_PAYMENTS_SECRET_KEY:}
     product:
       payoutRate: 90
-  payout:
-    readyWaitingDays: 14
