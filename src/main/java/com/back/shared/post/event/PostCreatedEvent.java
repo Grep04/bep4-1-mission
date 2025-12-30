@@ -7,5 +7,5 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class PostCreatedEvent {
-    private PostDto post;
+    private final PostDto post;
 }
