@@ -1,5 +1,6 @@
 package com.back.global.rsData;
 
+import com.back.standard.resultType.ResultType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +10,7 @@ import org.springframework.http.ResponseEntity;
  */
 @AllArgsConstructor
 @Getter
-public class RsData<T> {
+public class RsData<T> implements ResultType {
     private final String resultCode;
     private final String msg;
     private final T data;
