@@ -16,16 +16,4 @@ public class PostCommentDto {
     private final int authorId;
     private final String authorName;
     private final String content;
-
-    public PostCommentDto(PostComment comment) {
-        this(
-            comment.getId(),
-            comment.getCreateDate(),
-            comment.getModifyDate(),
-            comment.getPost().getId(),
-            comment.getAuthor().getId(),
-            comment.getAuthor().getNickname(),
-            comment.getContent()
-        );
-    }
 }

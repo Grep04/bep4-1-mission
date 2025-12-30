@@ -40,7 +40,7 @@ public class CashSyncMemberUseCase {
             */
             eventPublisher.publish(
                     new CashMemberCreatedEvent(
-                            new CashMemberDto(_member)
+                            _member.toDto()
                     )
             );
         }

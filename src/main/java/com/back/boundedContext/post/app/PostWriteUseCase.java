@@ -24,7 +24,7 @@ public class PostWriteUseCase {
 
         // 결합도 분리를 위한 이벤트 발행
         eventPublisher.publish(
-                new PostCreatedEvent(new PostDto(post))
+                new PostCreatedEvent(post.toDto())
         );
 
         String randomSecureTip = memberApiClient.getRandomSecureTip();
